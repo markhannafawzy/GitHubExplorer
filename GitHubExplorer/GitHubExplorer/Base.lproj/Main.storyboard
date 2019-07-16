@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Gg-YG-Qzb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Repos View Controller-->
+        <scene sceneID="TEm-Nv-YAJ">
+            <objects>
+                <viewController id="2Gg-YG-Qzb" customClass="SearchReposViewController" customModule="GitHubExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wid-dH-7Ns">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="esE-LF-Ehp">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2Gg-YG-Qzb" id="ZZz-e3-4o2"/>
+                                    <outlet property="delegate" destination="2Gg-YG-Qzb" id="QAa-9p-Zua"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyr-6x-BQf">
+                                <rect key="frame" x="10" y="54" width="394" height="36"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NrP-iE-dZA" firstAttribute="bottom" secondItem="esE-LF-Ehp" secondAttribute="bottom" id="0cT-Qj-mnz"/>
+                            <constraint firstItem="Dyr-6x-BQf" firstAttribute="leading" secondItem="NrP-iE-dZA" secondAttribute="leading" constant="10" id="GxY-JJ-TAy"/>
+                            <constraint firstItem="NrP-iE-dZA" firstAttribute="trailing" secondItem="Dyr-6x-BQf" secondAttribute="trailing" constant="10" id="WaS-0A-e74"/>
+                            <constraint firstItem="NrP-iE-dZA" firstAttribute="trailing" secondItem="esE-LF-Ehp" secondAttribute="trailing" id="eK9-Q1-z4p"/>
+                            <constraint firstItem="esE-LF-Ehp" firstAttribute="leading" secondItem="NrP-iE-dZA" secondAttribute="leading" id="lzC-ZY-8Pk"/>
+                            <constraint firstItem="esE-LF-Ehp" firstAttribute="top" secondItem="Dyr-6x-BQf" secondAttribute="bottom" constant="8" id="rTB-c7-fTA"/>
+                            <constraint firstItem="Dyr-6x-BQf" firstAttribute="top" secondItem="NrP-iE-dZA" secondAttribute="top" constant="10" id="yZO-2w-EfF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NrP-iE-dZA"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchfield" destination="Dyr-6x-BQf" id="T4x-hJ-5va"/>
+                        <outlet property="tableView" destination="esE-LF-Ehp" id="hVp-Ed-2Yc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bF-Mv-NVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62.318840579710148" y="-32.142857142857139"/>
+        </scene>
+    </scenes>
+</document>
